@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import StarRating from 'react-native-star-rating';
 import dateFormat from 'dateformat';
-// import VideoPlayer from 'react-native-video-controls';
 
 import {
   View,
@@ -37,11 +36,6 @@ const Detail = ({route, navigation}) => {
 
   return (
     <>
-      <Modal animationType="slide" visible={isModalVisible}>
-        <View style={styles.videoModal}>
-          {/* <VideoPlayer source={{uri: 'https://vjs.zencdn.net/v/oceans.mp4'}} /> */}
-        </View>
-      </Modal>
       {isLoading && <ActivityIndicator size="large" />}
       {!isLoading && (
         <ScrollView>
