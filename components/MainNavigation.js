@@ -4,6 +4,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Home from '../screens/Home';
 import Detail from '../screens/Detail';
 import Navbar from '../components/Navbar';
+import Search from '../screens/Search';
 
 const Stack = createNativeStackNavigator();
 
@@ -22,6 +23,15 @@ const MainNavigation = () => {
       <Stack.Screen
         name="Details"
         component={Detail}
+        options={{
+          headerTransparent: true,
+          headerBackVisible: false,
+          headerTitle: () => <Navbar />,
+        }}
+      />
+      <Stack.Screen
+        name="Search"
+        component={Search}
         options={{
           headerTransparent: true,
           headerBackVisible: false,
