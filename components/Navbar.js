@@ -3,6 +3,8 @@ import {View, Image, TouchableOpacity, StyleSheet} from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import {useNavigation} from '@react-navigation/native';
 
+import Colors from '../themes/colors';
+
 const Navbar = ({main = false}) => {
   const navigation = useNavigation();
 
@@ -18,7 +20,7 @@ const Navbar = ({main = false}) => {
             onPress={() => {
               navigation.navigate('Search');
             }}>
-            <Icon name="search-outline" size={40} color="#87CEEB" />
+            <Icon name="search-outline" size={40} color={Colors.primary} />
           </TouchableOpacity>
         </View>
       ) : (
@@ -26,7 +28,7 @@ const Navbar = ({main = false}) => {
           onPress={() => {
             navigation.goBack();
           }}>
-          <Icon name="chevron-back" size={40} color="#87CEEB" />
+          <Icon name="chevron-back" size={40} color={Colors.primary} />
         </TouchableOpacity>
       )}
     </View>
